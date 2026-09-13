@@ -1,0 +1,62 @@
+{
+  "n_total": 3240,
+  "n_features": 15,
+  "baseline_defect_rate": 0.8404320987654321,
+  "spc": {
+    "lot_size": 50,
+    "n_lots": 64,
+    "pbar": 0.8404320987654321,
+    "ucl": 0.9957996549135204,
+    "lcl": 0.6850645426173438,
+    "n_out_of_control_lots": 4,
+    "out_of_control_lot_ids": [
+      60,
+      61,
+      62,
+      63
+    ]
+  },
+  "analyze": {
+    "defect_rate_linear_corr_note": "DefectRate(연속형)는 어떤 변수와도 |r|<0.03으로 사실상 무상관 (노이즈에 가까운 합성 변수)",
+    "rf_auc_defect_status": 0.7965998474655375,
+    "top10_feature_importance": {
+      "MaintenanceHours": 0.25906148704015386,
+      "QualityScore": 0.16057314780378396,
+      "ProductionVolume": 0.11666924920194413,
+      "StockoutRate": 0.04831275625220678,
+      "AdditiveMaterialCost": 0.04574834078865814,
+      "EnergyEfficiency": 0.04422183318974982,
+      "EnergyConsumption": 0.04403190644770433,
+      "InventoryTurnover": 0.04379425861837753,
+      "WorkerProductivity": 0.04130125233246279,
+      "DowntimePercentage": 0.041135730103856134
+    },
+    "top_driver": "MaintenanceHours",
+    "top_driver_bin_defect_rate": {
+      "(0, 4]": 0.6981481481481482,
+      "(4, 8]": 0.7211538461538461,
+      "(8, 12]": 0.7974683544303798,
+      "(12, 16]": 0.9526411657559198,
+      "(16, 20]": 0.9608540925266904,
+      "(20, 24]": 0.9682539682539683
+    },
+    "threshold": 12,
+    "high_group_n": 1489,
+    "high_group_share_pct": 45.95679012345679,
+    "high_group_actual_defect_rate": 0.9597044996642041,
+    "low_group_actual_defect_rate": 0.7390062821245003
+  },
+  "improve_simulation": {
+    "target_value": 6.0,
+    "high_group_before": 0.9580674949630624,
+    "high_group_after": 0.7374815312290128,
+    "high_group_pp_reduction": 22.05859637340496,
+    "high_group_rel_reduction_pct": 23.02405257393208,
+    "overall_before": 0.8404320987654321,
+    "overall_after": 0.7383055555555555,
+    "overall_pp_reduction": 10.212654320987657,
+    "overall_rel_reduction_pct": 12.151670951156817,
+    "disclosure": "실제 공정 개입 결과가 아니라 학습된 RandomForest 모델의 반사실적(counterfactual) 추정치임"
+  },
+  "control_rule": "MaintenanceHours 로트 평균이 12시간을 초과하면 즉시 경보. p-관리도 UCL(0.996)/LCL(0.685) 이탈 로트는 별도 원인조사."
+}

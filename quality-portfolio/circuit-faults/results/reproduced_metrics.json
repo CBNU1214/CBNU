@@ -1,0 +1,63 @@
+{
+  "circuits": [
+    {
+      "circuit": "c17",
+      "n_gates": 6,
+      "n_inputs": 5,
+      "n_outputs": 2,
+      "n_faults": 22,
+      "final_coverage_1000vec": 1.0,
+      "n_undetected": 0
+    },
+    {
+      "circuit": "c432",
+      "n_gates": 171,
+      "n_inputs": 36,
+      "n_outputs": 7,
+      "n_faults": 414,
+      "final_coverage_1000vec": 0.9927536231884058,
+      "n_undetected": 3
+    },
+    {
+      "circuit": "c499",
+      "n_gates": 174,
+      "n_inputs": 41,
+      "n_outputs": 32,
+      "n_faults": 430,
+      "final_coverage_1000vec": 1.0,
+      "n_undetected": 0
+    },
+    {
+      "circuit": "c880",
+      "n_gates": 323,
+      "n_inputs": 60,
+      "n_outputs": 26,
+      "n_faults": 766,
+      "final_coverage_1000vec": 0.97911227154047,
+      "n_undetected": 16
+    },
+    {
+      "circuit": "c1355",
+      "n_gates": 518,
+      "n_inputs": 41,
+      "n_outputs": 32,
+      "n_faults": 1118,
+      "final_coverage_1000vec": 0.9955277280858676,
+      "n_undetected": 5
+    },
+    {
+      "circuit": "c1908",
+      "n_gates": 479,
+      "n_inputs": 33,
+      "n_outputs": 25,
+      "n_faults": 1024,
+      "final_coverage_1000vec": 0.947265625,
+      "n_undetected": 54
+    }
+  ],
+  "total_faults": 3774,
+  "detected_faults": 3696,
+  "undetected_faults": 78,
+  "c17_exhaustive_coverage": 1.0,
+  "c17_independent_truth_table_inputs_checked": 32
+}

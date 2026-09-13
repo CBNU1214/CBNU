@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+**/data/*
+**/features_X.npy
+**/labels_y.npy
+**/figures/
+**/summary.json
+.DS_Store

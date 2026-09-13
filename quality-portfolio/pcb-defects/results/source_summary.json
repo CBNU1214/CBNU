@@ -1,0 +1,90 @@
+{
+  "n_images": 693,
+  "n_instances": 2953,
+  "n_classes": 6,
+  "class_distribution": {
+    "missing_hole": 497,
+    "mouse_bite": 492,
+    "open_circuit": 482,
+    "short": 491,
+    "spur": 488,
+    "spurious_copper": 503
+  },
+  "n_features": 45,
+  "feature_breakdown": {
+    "기하/밝기": 9,
+    "HOG(2x2구역x9방향)": 36
+  },
+  "train_size": 2214,
+  "test_size": 739,
+  "results": {
+    "Random Forest": {
+      "train_acc": 1.0,
+      "test_acc": 0.8741542625169147,
+      "macro_f1": 0.874059711373639,
+      "weighted_f1": 0.8740563312542019,
+      "macro_recall": 0.8741988883750361
+    },
+    "SVM (RBF, StandardScaler)": {
+      "train_acc": 0.9977416440831075,
+      "test_acc": 0.8903924221921515,
+      "macro_f1": 0.8907646257032993,
+      "weighted_f1": 0.8907489379484527,
+      "macro_recall": 0.8905539712489658
+    }
+  },
+  "best_model": "SVM (RBF, StandardScaler)",
+  "per_class_f1_best_model": {
+    "missing_hole": 1.0,
+    "mouse_bite": 0.8298755186721992,
+    "open_circuit": 0.9392712550607287,
+    "short": 0.946058091286307,
+    "spur": 0.782608695652174,
+    "spurious_copper": 0.8467741935483871
+  },
+  "per_class_recall_best_model": {
+    "missing_hole": 1.0,
+    "mouse_bite": 0.8130081300813008,
+    "open_circuit": 0.9586776859504132,
+    "short": 0.926829268292683,
+    "spur": 0.8114754098360656,
+    "spurious_copper": 0.8333333333333334
+  },
+  "per_class_precision_best_model": {
+    "missing_hole": 1.0,
+    "mouse_bite": 0.847457627118644,
+    "open_circuit": 0.9206349206349206,
+    "short": 0.9661016949152542,
+    "spur": 0.7557251908396947,
+    "spurious_copper": 0.860655737704918
+  },
+  "hardest_class": {
+    "label": "spur",
+    "f1": 0.782608695652174
+  },
+  "easiest_class": {
+    "label": "missing_hole",
+    "f1": 1.0
+  },
+  "top_confusion_pair": {
+    "true": "mouse_bite",
+    "pred": "spur",
+    "count": 14
+  },
+  "top10_feature_importance": {
+    "mean_edge_magnitude": 0.08869294568889548,
+    "mean_intensity": 0.06003909243078372,
+    "std_intensity": 0.050294534612669306,
+    "aspect_ratio": 0.04202087924780728,
+    "hog_q3_bin6": 0.03705717013634852,
+    "bbox_area": 0.035095309616039,
+    "hog_q1_bin2": 0.03361856920232847,
+    "area_ratio_to_board": 0.029261952418930263,
+    "hog_q4_bin2": 0.027893259606871192,
+    "hog_q2_bin6": 0.027716881079441747
+  },
+  "critical_defect_recall": {
+    "open_circuit": 0.9586776859504132,
+    "short": 0.926829268292683
+  }
+}
